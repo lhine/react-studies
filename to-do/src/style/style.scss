@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Kongtext';
+  src: url('../../assets/kongtext/kongtext.ttf') format('truetype');
+}
+
+.App {
+  font-family: 'Kongtext', sans-serif;
+  font-size: 14px;
+  max-width: 1280px;
+  margin: auto;
+  padding: 48px 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+
+  &_addTask {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    @media only screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: end;
+    }
+
+    .nes-field {
+      width: 100%;
+    }
+
+    button {
+      flex-shrink: 0;
+    }
+  }
+
+  &_listOfTasks {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    &_firstColumn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      margin: 0 auto;
+      @media only screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+        gap: 16px;
+      }
+    }
+
+    &_secondColumn {
+      flex: 0 0 70%;
+    }
+  }
+
+  @import './components/task.scss';
+}

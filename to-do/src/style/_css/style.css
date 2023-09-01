@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Kongtext';
+  src: url('../../assets/kongtext/kongtext.ttf') format('truetype');
+}
+.App {
+  font-family: 'Kongtext', sans-serif;
+  font-size: 14px;
+  max-width: 1280px;
+  margin: auto;
+  padding: 48px 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+@media only screen and (max-width: 768px) {
+  .App {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+}
+.App_addTask {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .App_addTask {
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+}
+.App_addTask .nes-field {
+  width: 100%;
+}
+.App_addTask button {
+  flex-shrink: 0;
+}
+.App_listOfTasks {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .App_listOfTasks {
+    flex-direction: column;
+  }
+}
+.App_listOfTasks_firstColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  .App_listOfTasks_firstColumn {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+}
+.App_listOfTasks_secondColumn {
+  flex: 0 0 70%;
+}
+.App .task {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 8px 8px 6px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 2px;
+}
+.App .task label {
+  margin-bottom: 0;
+  padding-right: 8px;
+}
+.App .task label input[type='checkbox'] {
+  display: none;
+}
+.App .task label .nes-checkbox + span {
+  display: flex;
+  left: 28px;
+}
+.App .task label .nes-checkbox + span::before {
+  top: 0;
+}
+.App .task label .nes-checkbox:checked + span {
+  text-decoration: line-through;
+  color: #92cc41;
+}
+.App .task label .nes-checkbox:checked + span::before {
+  color: #92cc41;
+}
+.App .task button {
+  padding: 0 4px;
+  font-size: 8px;
+  font-weight: bold;
+  height: fit-content;
+  visibility: hidden;
+}
+.App .task:hover,
+.App .task:focus {
+  border-color: #000;
+}
+.App .task:hover button,
+.App .task:focus button {
+  visibility: visible;
+}
+
+/*# sourceMappingURL=style.css.map */
